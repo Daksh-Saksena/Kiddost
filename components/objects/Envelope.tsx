@@ -28,15 +28,15 @@ export default function Envelope({ title, description, action, className }: Enve
       )}
     >
       {/* Top flap simulation */}
-      <div 
+      <div
         className="absolute top-0 left-0 right-0 h-32 origin-top bg-paper-kraft kraft-texture border-b border-black/10 z-0"
         style={{
           clipPath: 'polygon(0 0, 100% 0, 50% 100%)',
           boxShadow: 'inset 0 -2px 10px rgba(0,0,0,0.05)'
         }}
       />
-      
-      {/* Side flaps lines */}
+
+      {/* Side flines */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-20"
         style={{
           background: `
@@ -56,9 +56,9 @@ export default function Envelope({ title, description, action, className }: Enve
             {description}
           </p>
           {action}
-          
+
           <div className="absolute bottom-4 right-4">
-             <RubberStamp text="Express" color="terracotta" size="sm" rotation={-15} />
+            <RubberStamp text="Express" color="terracotta" size="sm" rotation={-15} />
           </div>
         </div>
       </div>
