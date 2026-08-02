@@ -1,0 +1,139 @@
+'use client'
+
+import SectionContainer from '@/components/layout/SectionContainer'
+import CataloguePage from '@/components/objects/CataloguePage'
+import ReportCard from '@/components/objects/ReportCard'
+import Certificate from '@/components/objects/Certificate'
+import IndexCard from '@/components/objects/IndexCard'
+import MarginNote from '@/components/ui/MarginNote'
+import StickyNote from '@/components/ui/StickyNote'
+import Tag from '@/components/ui/Tag'
+import FoldedCorner from '@/components/ui/FoldedCorner'
+import Divider from '@/components/ui/Divider'
+
+// ─────────────────────────────────────────────────────────────────────────────
+// KidDost Physical Object Library Showcase
+// Demonstrates the editorial, asymmetrical layout using physical document models.
+// ─────────────────────────────────────────────────────────────────────────────
+
+export default function ComponentShowcase() {
+  return (
+    <div className="flex flex-col overflow-hidden pb-32">
+
+      {/* ── 1. The Catalogue Page (Services) ── */}
+      <SectionContainer id="showcase-catalogue" size="lg" className="relative z-10">
+        <CataloguePage
+          title="What a KidDost does"
+          subtitle="Every session is crafted around your child's age, interests, and energy."
+          pageNumber="02"
+        >
+          {/* Service Item 1 */}
+          <div className="flex flex-col gap-3">
+            <h4 className="font-serif text-2xl text-ink-charcoal border-b border-ink-light/20 pb-2">
+              Play & Engagement
+            </h4>
+            <p className="font-sans text-sm text-ink-medium leading-relaxed">
+              Structured and free play that develops social, emotional, and cognitive skills.
+              We bring age-appropriate games and boundless energy.
+            </p>
+            <div className="flex gap-2 mt-2">
+              <Tag color="terracotta">Indoor</Tag>
+              <Tag color="blue">Outdoor</Tag>
+            </div>
+          </div>
+
+          {/* Service Item 2 */}
+          <div className="flex flex-col gap-3">
+            <h4 className="font-serif text-2xl text-ink-charcoal border-b border-ink-light/20 pb-2">
+              Home Tutoring
+            </h4>
+            <p className="font-sans text-sm text-ink-medium leading-relaxed">
+              Personalised academic support and homework help in a comfortable home setting.
+              No more daily battles over math worksheets.
+            </p>
+            <div className="flex gap-2 mt-2">
+              <Tag color="sage">All grades</Tag>
+            </div>
+          </div>
+        </CataloguePage>
+
+        {/* Scattered elements around the catalogue */}
+        <div className="absolute top-1/4 -left-12 z-0 hidden lg:block">
+          <StickyNote color="yellow" tilt="right">
+            Parents love the tutoring!
+          </StickyNote>
+        </div>
+      </SectionContainer>
+
+      <Divider variant="thread" />
+
+      {/* ── 2. The Certificate (Safety) ── */}
+      <SectionContainer id="showcase-safety" size="lg" className="relative z-20">
+        <div className="relative">
+          <Certificate
+            title="Circle of Trust Verification"
+            awardedTo="KidDost Companions"
+            description="Every KidDost member undergoes a rigorous background screening, including police verification and reference checks, before joining our network."
+            date="2024–2025"
+          />
+
+          {/* Margin note annotating the certificate */}
+          <div className="absolute top-10 -right-8 md:-right-24 z-30 hidden md:block">
+            <MarginNote color="charcoal" rotation={6}>
+              Safety is our<br/>first promise.
+            </MarginNote>
+          </div>
+        </div>
+      </SectionContainer>
+
+      {/* ── 3. Desk Scatter (Reviews & FAQs) ── */}
+      <SectionContainer id="showcase-scatter" size="xl" className="relative z-30">
+        <div className="relative h-[800px] md:h-[600px] w-full">
+          
+          {/* Document 1: Report Card (Review) */}
+          <div className="absolute top-0 left-0 md:left-10 w-full md:w-[450px] z-10" style={{ rotate: '-2deg' }}>
+            <ReportCard
+              name="Aysha's Parents"
+              subject="Child Engagement"
+              grade="A+"
+              comment="With KidDost, I won't feel guilty while stepping out for work. I know my child is enjoying and learning."
+              date="Oct 2024"
+            />
+          </div>
+
+          {/* Document 2: Index Card (FAQ) */}
+          <div className="absolute top-[400px] md:top-20 right-0 md:right-10 w-[90%] md:w-[350px] z-20">
+            <IndexCard
+              heading="What if my child doesn't mingle?"
+              content={
+                <p>
+                  It's normal! Our companions are trained to be patient. We usually spend the first 20 minutes doing low-pressure parallel activities until your child feels comfortable.
+                </p>
+              }
+              rotation={3}
+            />
+          </div>
+
+          {/* Document 3: Another Report Card slightly tucked under */}
+          <div className="absolute top-[200px] md:top-[280px] left-4 md:left-1/3 w-[95%] md:w-[400px] z-15" style={{ rotate: '1deg' }}>
+            <ReportCard
+              name="Rohan's Mother"
+              subject="Home Tutoring"
+              grade="5 Stars"
+              comment="Finally, someone who makes math fun. Rohan actually looks forward to his sessions now."
+              date="Nov 2024"
+            />
+          </div>
+
+          {/* Scattered decorative note */}
+          <div className="absolute bottom-10 right-1/4 z-30 hidden md:block">
+            <StickyNote color="blue" tilt="left">
+              Follow up with Rohan!
+            </StickyNote>
+          </div>
+        </div>
+      </SectionContainer>
+
+    </div>
+  )
+}

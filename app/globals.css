@@ -1,26 +1,212 @@
 @import "tailwindcss";
 
+/* ─── KidDost Design System — Global Styles ─────────────────────────────────
+   Tailwind v4 uses @theme for custom tokens directly in CSS.
+   No tailwind.config.ts required.
+──────────────────────────────────────────────────────────────────────────── */
+
+@theme {
+  /* ── Fonts ── */
+  --font-serif: var(--font-playfair), "Georgia", "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-hand: var(--font-caveat), "Comic Sans MS", cursive;
+
+  /* ── Paper Colors ── */
+  --color-paper-warm:     #FBF8F2;
+  --color-paper-white:    #FEFCF8;
+  --color-paper-cream:    #F5EFE0;
+  --color-paper-notebook: #F8F6EE;
+  --color-paper-kraft:    #E8D5B0;
+
+  /* ── Ink Colors ── */
+  --color-ink-charcoal: #2C2C2C;
+  --color-ink-warm:     #4A4035;
+  --color-ink-medium:   #7A7060;
+  --color-ink-light:    #A89F90;
+  --color-ink-faint:    #C9C0B0;
+
+  /* ── Accent Colors (all muted) ── */
+  --color-sage:             #8A9E8A;
+  --color-sage-dark:        #6A7E6A;
+  --color-terracotta:       #C4785A;
+  --color-terracotta-light: #E8B49A;
+  --color-dusty-blue:       #7A9BAD;
+  --color-dusty-blue-dark:  #5A7B8D;
+  --color-ochre:            #C9A84C;
+  --color-ochre-dark:       #A88A3C;
+  --color-forest:           #5A7A62;
+
+  /* ── Tape Colors ── */
+  --color-tape-yellow: #F5E8A0;
+  --color-tape-blue:   #B8D4E0;
+  --color-tape-pink:   #E8C4C0;
+
+  /* ── Brand ── */
+  --color-whatsapp:      #25D366;
+  --color-whatsapp-dark: #1BA84E;
+
+  /* ── Border ── */
+  --color-border-soft:   rgba(44, 35, 25, 0.08);
+  --color-border-medium: rgba(44, 35, 25, 0.14);
+  --color-border-warm:   rgba(200, 180, 140, 0.30);
+
+  /* ── Paper Shadows ── */
+  --shadow-paper-sm:   0 1px 3px rgba(44, 35, 25, 0.08);
+  --shadow-paper:      0 2px 8px rgba(44, 35, 25, 0.10), 0 1px 2px rgba(44, 35, 25, 0.06);
+  --shadow-paper-md:   0 4px 16px rgba(44, 35, 25, 0.12), 0 2px 4px rgba(44, 35, 25, 0.08);
+  --shadow-paper-lg:   0 8px 32px rgba(44, 35, 25, 0.14), 0 4px 8px rgba(44, 35, 25, 0.08);
+  --shadow-paper-lift: 0 12px 40px rgba(44, 35, 25, 0.18), 0 4px 8px rgba(44, 35, 25, 0.10);
+
+  /* ── Radius ── */
+  --radius-none:  0px;
+  --radius-sm:    2px;
+  --radius-paper: 4px;
+  --radius-md:    8px;
+  --radius-lg:    12px;
+  --radius-xl:    16px;
+}
+
+/* ─── Root Variables ─────────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FBF8F2;
+  --foreground: #2C2C2C;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ─── Base ───────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+  /* Paper grain texture via SVG filter reference */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+/* ─── Typography ─────────────────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-ink-charcoal);
+}
+
+h5, h6 {
+  font-family: var(--font-sans);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-ink-medium);
+}
+
+p {
+  color: var(--color-ink-warm);
+  line-height: 1.75;
+}
+
+/* ─── Paper Line Pattern (for notebook variant) ──────────────────────────── */
+.paper-lines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    rgba(180, 190, 200, 0.18) 27px,
+    rgba(180, 190, 200, 0.18) 28px
+  );
+  background-size: 100% 28px;
+}
+
+/* ─── Texture Overlays ───────────────────────────────────────────────────── */
+.paper-texture {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+.kraft-texture {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.07'/%3E%3C/svg%3E");
+}
+
+/* ─── WhatsApp Pulse Animation ───────────────────────────────────────────── */
+@keyframes whatsapp-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-pulse {
+  animation: whatsapp-pulse 2.4s ease-in-out infinite;
+}
+
+/* ─── Utility: Paper fold corner ─────────────────────────────────────────── */
+.fold-corner {
+  position: relative;
+  overflow: visible;
+}
+
+.fold-corner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(
+    225deg,
+    var(--color-paper-cream) 50%,
+    transparent 50%
+  );
+  border-top-left-radius: 2px;
+}
+
+/* ─── Tape Clip Decoration ───────────────────────────────────────────────── */
+.tape-horizontal {
+  position: relative;
+}
+
+.tape-horizontal::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 14px;
+  background-color: var(--color-tape-yellow);
+  opacity: 0.85;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.08);
+}
+
+/* ─── Focus styles ───────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ─── Selection ──────────────────────────────────────────────────────────── */
+::selection {
+  background-color: var(--color-terracotta-light);
+  color: var(--color-ink-charcoal);
+}
+
+/* ─── Scrollbar (subtle) ─────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-paper-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-faint);
+  border-radius: 3px;
 }
