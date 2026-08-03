@@ -17,12 +17,7 @@ export default function HeroSection() {
     >
       <CoverPage
         accentColor="sage"
-        title={
-          <>
-            Your child deserves<br />
-            <em className="italic text-terracotta not-italic" style={{ fontStyle: 'italic' }}>great company.</em>
-          </>
-        }
+        title="Screen-Free Learning Companions for Children Aged 1–8"
         subtitle={
           <div className="mt-6 w-fit mx-auto md:mx-0">
             <StickyNote color="yellow" tilt="right" className="text-center font-sans px-6 py-4">

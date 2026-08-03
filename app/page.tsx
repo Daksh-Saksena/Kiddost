@@ -48,7 +48,10 @@ export default function Page() {
         <Divider variant="thread" />
 
         {/* Pricing */}
-        <section id="pricing" className="relative w-full max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20 flex justify-center">
+        <section id="pricing" className="relative w-full max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20 flex flex-col items-center">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-ink-charcoal mb-10 text-center">
+            Pricing Details
+          </h2>
           <img 
             src="/Pricing.png" 
             alt="KidDost Pricing Plans" 

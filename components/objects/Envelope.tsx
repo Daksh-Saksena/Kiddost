@@ -6,7 +6,7 @@ import { cn } from '@/lib/cn'
 import RubberStamp from '@/components/ui/RubberStamp'
 
 interface EnvelopeProps {
-  title: string
+  title: React.ReactNode
   description: React.ReactNode
   action: React.ReactNode
   className?: string
@@ -48,7 +48,7 @@ export default function Envelope({ title, description, action, className }: Enve
 
       {/* Content — floating letter inside */}
       <div className="relative z-10 pt-20 px-4 pb-8 md:pt-24 md:pb-12 md:px-12 flex flex-col items-center">
-        <div className="bg-paper-white p-8 md:p-12 shadow-paper w-full max-w-xl text-center flex flex-col items-center">
+        <div className="bg-paper-white p-8 md:p-12 shadow-paper w-full max-w-xl text-left flex flex-col items-start">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-ink-charcoal mb-4">
             {title}
           </h2>

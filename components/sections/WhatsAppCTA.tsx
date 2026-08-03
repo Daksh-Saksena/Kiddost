@@ -42,11 +42,16 @@ export function WhatsAppCTASection() {
       </div>
 
       <Envelope
-        title="Screen-Free Learning Companions for Children Aged 1–8"
+        title={
+          <>
+            Your child deserves<br />
+            <em className="italic text-terracotta not-italic" style={{ fontStyle: 'italic' }}>great company.</em>
+          </>
+        }
         description={
           <>
             Trained female KidDost members engage your child at home through stories, puzzles, art, brain games, movement and age-appropriate learning activities.
-            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-6">
+            <div className="flex flex-wrap justify-start gap-x-4 gap-y-2 mt-6">
               <span className="font-sans text-sm font-semibold text-ink-medium uppercase tracking-wide">At-home</span>
               <span className="text-ink-light/50">&bull;</span>
               <span className="font-sans text-sm font-semibold text-ink-medium uppercase tracking-wide">One-to-one Sessions</span>
