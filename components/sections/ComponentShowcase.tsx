@@ -73,7 +73,7 @@ export default function ComponentShowcase() {
           <Certificate
             title="Circle of Trust Verification"
             awardedTo="KidDost Companions"
-            description="Every KidDost member undergoes a rigorous background screening, including police verification and reference checks, before joining our network."
+            description="Every KidDost member undergoes a rigorous background screening, including thorough identity and reference checks, before joining our network."
             date="2024–2025"
           />
 
@@ -88,21 +88,21 @@ export default function ComponentShowcase() {
 
       {/* ── 3. Desk Scatter (Reviews & FAQs) ── */}
       <SectionContainer id="showcase-scatter" size="xl" className="relative z-30">
-        <div className="relative h-[800px] md:h-[600px] w-full">
+        <div className="flex flex-col gap-12 md:block md:relative md:h-[600px] w-full items-center">
           
           {/* Document 1: Report Card (Review) */}
-          <div className="absolute top-0 left-0 md:left-10 w-full md:w-[450px] z-10" style={{ rotate: '-2deg' }}>
+          <div className="relative md:absolute md:top-0 md:left-10 w-full max-w-[450px] md:w-[450px] z-10 self-start" style={{ rotate: '-2deg' }}>
             <ReportCard
-              name="Aysha's Parents"
+              name="Priya S."
               subject="Child Engagement"
-              grade="A+"
-              comment="With KidDost, I won't feel guilty while stepping out for work. I know my child is enjoying and learning."
-              date="Oct 2024"
+              grade="5 Stars"
+              comment="KidDost has been a lifesaver! The companion was so patient and engaging. My 4-year-old usually takes time to warm up, but they were playing together in 10 minutes. Highly recommend!"
+              date="1 week ago"
             />
           </div>
 
           {/* Document 2: Index Card (FAQ) */}
-          <div className="absolute top-[400px] md:top-20 right-0 md:right-10 w-[90%] md:w-[350px] z-20">
+          <div className="relative md:absolute md:top-20 md:right-10 w-full max-w-[350px] md:w-[350px] z-20 self-end">
             <IndexCard
               heading="What if my child doesn't mingle?"
               content={
@@ -115,20 +115,20 @@ export default function ComponentShowcase() {
           </div>
 
           {/* Document 3: Another Report Card slightly tucked under */}
-          <div className="absolute top-[200px] md:top-[280px] left-4 md:left-1/3 w-[95%] md:w-[400px] z-15" style={{ rotate: '1deg' }}>
+          <div className="relative md:absolute md:top-[280px] md:left-1/3 w-full max-w-[450px] md:w-[400px] z-15 self-center" style={{ rotate: '1deg' }}>
             <ReportCard
-              name="Rohan's Mother"
+              name="Rahul M."
               subject="Home Tutoring"
               grade="5 Stars"
-              comment="Finally, someone who makes math fun. Rohan actually looks forward to his sessions now."
-              date="Nov 2024"
+              comment="Excellent tutoring service. The tutor understood exactly where my daughter was struggling in Math and made the sessions interactive and fun. We are seeing great progress."
+              date="3 weeks ago"
             />
           </div>
 
           {/* Scattered decorative note */}
           <div className="absolute bottom-10 right-1/4 z-30 hidden md:block">
             <StickyNote color="blue" tilt="left">
-              Follow up with Rohan!
+              Follow up with Rahul!
             </StickyNote>
           </div>
         </div>
