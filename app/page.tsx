@@ -53,7 +53,7 @@ export default function Page() {
         <section id="pricing" className="relative w-full bg-paper-warm kraft-texture border-t border-border-soft py-16 md:py-24">
           <div className="max-w-5xl mx-auto px-4 md:px-8 flex flex-col items-center relative">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-8 bg-tape-yellow/70 rotate-[2deg] opacity-90 backdrop-blur-sm shadow-sm z-20" />
-            <div className="bg-paper-white p-6 md:p-10 shadow-paper-xl border border-border-soft w-full max-w-4xl relative z-10">
+            <div className="bg-paper-cream p-6 md:p-10 shadow-paper-xl border border-border-soft w-full max-w-4xl relative z-10">
               <div className="mb-8 max-w-2xl text-center md:text-left">
                 <h2 className="font-serif text-4xl md:text-5xl font-semibold text-ink-charcoal mb-2">
                   Pricing Plans

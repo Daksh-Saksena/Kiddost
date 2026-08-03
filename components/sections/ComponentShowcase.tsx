@@ -74,7 +74,7 @@ export default function ComponentShowcase() {
                 <li className="flex gap-2"><span className="text-terracotta">•</span> Ongoing parent feedback</li>
               </ul>
             }
-            date="2024–2025"
+            date="October 2022"
           />
 
           {/* Margin note annotating the certificate */}

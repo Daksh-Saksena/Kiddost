@@ -54,7 +54,7 @@ export default function Certificate({
         <div className="flex justify-between items-end mt-8 border-t border-dusty-blue/20 pt-4">
           <div className="text-left">
             <span className="font-sans text-[10px] uppercase tracking-wider text-ink-light block mb-1">
-              Valid For
+              Since
             </span>
             <span className="font-hand text-xl text-ink-charcoal">{date}</span>
           </div>

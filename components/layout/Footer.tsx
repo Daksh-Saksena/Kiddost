@@ -9,16 +9,14 @@ import Divider from '@/components/ui/Divider'
 
 const footerLinks = {
   about: [
-    { label: 'Our Mission',     href: '#about' },
-    { label: 'Who is a KidDost', href: '#about' },
-    { label: 'Our Team',        href: '#team' },
-    { label: 'Philosophy',      href: '#about' },
+    { label: 'Who is a KidDost', href: '#showcase-catalogue' },
+    { label: 'How KidDost Works', href: '#how-it-works' },
+    { label: 'When to Book', href: '#when-to-book' },
   ],
   services: [
-    { label: 'Play & Engagement', href: '#services' },
-    { label: 'Home Tutoring',     href: '#services' },
-    { label: 'Activity Sessions', href: '#services' },
-    { label: 'Pricing Plans',     href: '#pricing' },
+    { label: 'Pricing Plans', href: '#pricing' },
+    { label: 'Reviews & FAQs', href: '#showcase-scatter' },
+    { label: 'Privacy Policy', href: '/privacy' },
   ],
 }
 
@@ -156,9 +154,6 @@ export default function Footer() {
         <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-sans text-xs text-ink-faint text-center sm:text-left">
             © {currentYear} KidDost Tech Private Limited. All rights reserved.
-          </p>
-          <p className="font-sans text-xs text-ink-faint flex items-center gap-1">
-            Made with <Heart size={11} className="text-terracotta fill-terracotta" aria-label="love" /> for parents everywhere
           </p>
           <div className="flex items-center gap-4">
             <a href="/privacy" className="font-sans text-xs text-ink-light hover:text-ink-medium transition-colors">
