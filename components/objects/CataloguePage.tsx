@@ -34,9 +34,11 @@ export default function CataloguePage({
       )}
     >
       {/* Page number annotation */}
-      <div className="absolute top-8 right-8 border border-ink-charcoal/20 w-10 h-10 rounded-full flex items-center justify-center">
-        <span className="font-serif text-sm font-semibold text-ink-charcoal">{pageNumber}</span>
-      </div>
+      {pageNumber && (
+        <div className="absolute top-8 right-8 border border-ink-charcoal/20 w-10 h-10 rounded-full flex items-center justify-center">
+          <span className="font-serif text-sm font-semibold text-ink-charcoal">{pageNumber}</span>
+        </div>
+      )}
 
       <div className="mb-12 max-w-2xl pr-16 md:pr-20">
         <h2 className="font-serif text-4xl md:text-5xl font-semibold text-ink-charcoal mb-4">

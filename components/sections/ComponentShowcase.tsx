@@ -34,13 +34,13 @@ export default function ComponentShowcase() {
             <Badge variant="terracotta">✓ Activities planned by age</Badge>
             <Badge variant="blue">✓ Flexible hourly bookings</Badge>
           </div>
-          
+
           <div className="col-span-1 md:col-span-2 mt-2 mb-8">
             <div className="bg-tape-yellow/30 p-6 rounded-sm relative shadow-paper-sm border border-tape-yellow/50">
               {/* Tape decoration */}
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-tape-pink/60 rotate-2 opacity-80 backdrop-blur-sm" />
               <p className="font-hand text-3xl text-ink-charcoal text-center leading-relaxed">
-                "KidDost is <span className="text-terracotta underline decoration-wavy underline-offset-4">not</span> a nanny service. Our focus is active, screen-free engagement and learning through play."
+                "KidDost is <span className="text-terracotta underline decoration-wavy underline-offset-4">not</span> a nanny service. Our focus is active, screen-free engagement and learning through play for curious minds aged 1-8."
               </p>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function ComponentShowcase() {
           {/* Margin note annotating the certificate */}
           <div className="absolute top-10 -right-8 md:-right-24 z-30 hidden md:block">
             <MarginNote color="charcoal" rotation={6}>
-              Safety is our<br/>first promise.
+              Safety is our<br />first promise.
             </MarginNote>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function ComponentShowcase() {
       {/* ── 3. Desk Scatter (Reviews & FAQs) ── */}
       <SectionContainer id="showcase-scatter" size="xl" className="relative z-30">
         <div className="flex flex-col gap-12 md:block md:relative md:h-[600px] w-full items-center">
-          
+
           {/* Document 1: Report Card (Review) */}
           <div className="relative md:absolute md:top-0 md:left-10 w-full max-w-[450px] md:w-[450px] z-10 self-start" style={{ rotate: '-2deg' }}>
             <ReportCard

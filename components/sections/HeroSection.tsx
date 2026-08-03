@@ -20,7 +20,7 @@ export default function HeroSection() {
         title={
           <>
             Screen-Free Learning Companions <br className="hidden md:block" />
-            <span className="text-terracotta">for Children Aged 1–8</span>
+            <span className="text-terracotta italic">for Children Aged 1–8</span>
           </>
         }
         subtitle={

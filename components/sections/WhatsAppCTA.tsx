@@ -53,9 +53,7 @@ export function WhatsAppCTASection() {
             Trained educated female KidDost members engage your child at home through stories, puzzles, art, brain games, movement and age-appropriate learning activities.
             <div className="flex flex-wrap justify-start gap-x-4 gap-y-2 mt-6">
               <span className="font-sans text-sm font-semibold text-ink-medium uppercase tracking-wide">At-home</span>
-              <span className="text-ink-light/50">&bull;</span>
               <span className="font-sans text-sm font-semibold text-ink-medium uppercase tracking-wide">One-to-one Sessions</span>
-              <span className="text-ink-light/50">&bull;</span>
               <span className="font-sans text-sm font-semibold text-ink-medium uppercase tracking-wide">Bangalore</span>
             </div>
           </>
@@ -68,15 +66,15 @@ export function WhatsAppCTASection() {
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                'inline-flex items-center gap-2.5',
-                'bg-whatsapp text-white font-sans text-base font-semibold',
-                'px-8 py-4 rounded-sm',
+                'inline-flex items-center justify-center gap-2',
+                'bg-whatsapp text-white font-sans text-sm md:text-base font-semibold',
+                'px-4 py-3 md:px-8 md:py-4 rounded-sm text-center',
                 'hover:bg-whatsapp-dark transition-colors duration-200',
                 'shadow-paper hover:shadow-paper-md',
                 'whatsapp-pulse'
               )}
             >
-              <MessageCircle size={20} aria-hidden="true" />
+              <MessageCircle size={18} className="md:w-5 md:h-5 shrink-0" aria-hidden="true" />
               <span>Book Your Introductory Session</span>
             </a>
           </div>

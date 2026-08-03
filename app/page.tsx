@@ -40,8 +40,6 @@ export default function Page() {
         {/* How It Works */}
         <HowItWorksSection />
 
-        <Divider variant="thread" />
-
         {/* Design System Showcase */}
         <ComponentShowcase />
 
