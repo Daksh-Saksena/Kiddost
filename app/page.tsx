@@ -3,6 +3,7 @@ import Footer from '@/components/layout/Footer'
 import HeroSection from '@/components/sections/HeroSection'
 import ComponentShowcase from '@/components/sections/ComponentShowcase'
 import { WhatsAppCTASection } from '@/components/sections/WhatsAppCTA'
+import WhenToBookSection from '@/components/sections/WhenToBookSection'
 import HowItWorksSection from '@/components/sections/HowItWorksSection'
 import Divider from '@/components/ui/Divider'
 
@@ -37,6 +38,9 @@ export default function Page() {
 
         <Divider variant="rule" />
 
+        {/* When To Book */}
+        <WhenToBookSection />
+
         {/* How It Works */}
         <HowItWorksSection />
 
@@ -46,18 +50,20 @@ export default function Page() {
         <Divider variant="thread" />
 
         {/* Pricing */}
-        <section id="pricing" className="relative w-full max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-20">
-          <div className="mb-10 max-w-2xl">
-            <h2 className="font-serif text-4xl md:text-5xl font-semibold text-ink-charcoal mb-4">
-              Pricing Details
-            </h2>
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src="/Pricing.png" 
-              alt="KidDost Pricing Plans" 
-              className="w-full max-w-4xl h-auto rounded-md shadow-paper-lg border border-border-soft" 
-            />
+        <section id="pricing" className="relative w-full bg-paper-warm kraft-texture border-t border-border-soft py-16 md:py-24">
+          <div className="max-w-5xl mx-auto px-4 md:px-8">
+            <div className="mb-10 max-w-2xl">
+              <h2 className="font-serif text-4xl md:text-5xl font-semibold text-ink-charcoal mb-4">
+                Pricing Details
+              </h2>
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="/Pricing.png" 
+                alt="KidDost Pricing Plans" 
+                className="w-full max-w-4xl h-auto rounded-sm shadow-paper border border-border-soft" 
+              />
+            </div>
           </div>
         </section>
       </main>

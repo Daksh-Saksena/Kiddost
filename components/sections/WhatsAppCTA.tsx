@@ -66,16 +66,16 @@ export function WhatsAppCTASection() {
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                'inline-flex items-center justify-center gap-2',
+                'inline-flex items-center justify-start gap-3',
                 'bg-whatsapp text-white font-sans text-sm md:text-base font-semibold',
-                'px-4 py-3 md:px-8 md:py-4 rounded-sm text-center',
+                'px-6 py-3 md:px-8 md:py-4 rounded-sm text-left',
                 'hover:bg-whatsapp-dark transition-colors duration-200',
                 'shadow-paper hover:shadow-paper-md',
                 'whatsapp-pulse'
               )}
             >
-              <MessageCircle size={18} className="md:w-5 md:h-5 shrink-0" aria-hidden="true" />
-              <span>Book Your Introductory Session</span>
+              <MessageCircle size={22} className="shrink-0" aria-hidden="true" />
+              <span>Book Your Introductory<br />Session</span>
             </a>
           </div>
         }

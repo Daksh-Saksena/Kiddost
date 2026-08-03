@@ -8,11 +8,24 @@ import { whatsapp } from '@/lib/tokens'
 import { cn } from '@/lib/cn'
 
 const navLinks = [
-  { label: 'About',       href: '#about' },
-  { label: 'Services',    href: '#services' },
-  { label: 'How It Works',href: '#how-it-works' },
-  { label: 'Safety',      href: '#safety' },
-  { label: 'Reviews',     href: '#reviews' },
+  {
+    label: 'About',
+    subLinks: [
+      { label: 'Our Mission', href: '#about' },
+      { label: 'Who is a KidDost', href: '#showcase-catalogue' },
+      { label: 'Our Team', href: '#team' },
+      { label: 'Philosophy', href: '#about' },
+    ]
+  },
+  {
+    label: 'Services',
+    subLinks: [
+      { label: 'Play & Engagement', href: '#services' },
+      { label: 'Home Tutoring', href: '#services' },
+      { label: 'Activity Sessions', href: '#services' },
+      { label: 'Pricing Plans', href: '#pricing' },
+    ]
+  }
 ]
 
 export default function Navigation() {
@@ -65,19 +78,29 @@ export default function Navigation() {
           {/* Desktop nav links */}
           <ul className="hidden md:flex items-center gap-7" role="list">
             {navLinks.map(link => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
+              <li key={link.label} className="relative group">
+                <span
                   className={cn(
-                    'font-sans text-sm font-medium text-ink-medium',
-                    'hover:text-ink-charcoal transition-colors duration-150',
-                    'relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1px]',
+                    'font-sans text-sm font-medium text-ink-medium cursor-pointer',
+                    'hover:text-ink-charcoal transition-colors duration-150 py-4',
+                    'relative after:absolute after:bottom-[14px] after:left-0 after:w-0 after:h-[1px]',
                     'after:bg-terracotta after:transition-all after:duration-200',
                     'hover:after:w-full'
                   )}
                 >
                   {link.label}
-                </a>
+                </span>
+                <div className="absolute top-[48px] left-0 w-48 bg-paper-white shadow-paper border border-border-soft rounded-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <ul className="flex flex-col py-2">
+                    {link.subLinks.map(sub => (
+                      <li key={sub.label}>
+                        <a href={sub.href} className="block px-4 py-2 font-sans text-sm text-ink-medium hover:text-ink-charcoal hover:bg-paper-cream transition-colors">
+                          {sub.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </li>
             ))}
           </ul>
@@ -167,22 +190,32 @@ export default function Navigation() {
                 <ul className="flex flex-col gap-1" role="list">
                   {navLinks.map((link, i) => (
                     <motion.li
-                      key={link.href}
+                      key={link.label}
                       initial={{ opacity: 0, x: 12 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.06, duration: 0.25 }}
+                      className="border-b border-border-soft/50 py-2"
                     >
-                      <a
-                        href={link.href}
-                        onClick={() => setMobileOpen(false)}
-                        className={cn(
-                          'block py-3 px-3 rounded-sm font-sans text-base font-medium',
-                          'text-ink-warm hover:text-ink-charcoal hover:bg-paper-cream',
-                          'transition-all duration-150 border-b border-border-soft/50'
-                        )}
-                      >
+                      <span className="block px-3 py-2 font-serif text-lg font-semibold text-ink-charcoal">
                         {link.label}
-                      </a>
+                      </span>
+                      <ul className="flex flex-col pl-4 mt-1">
+                        {link.subLinks.map((sub) => (
+                          <li key={sub.label}>
+                            <a
+                              href={sub.href}
+                              onClick={() => setMobileOpen(false)}
+                              className={cn(
+                                'block py-2 px-3 rounded-sm font-sans text-base font-medium',
+                                'text-ink-warm hover:text-ink-charcoal hover:bg-paper-cream',
+                                'transition-all duration-150'
+                              )}
+                            >
+                              {sub.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
                     </motion.li>
                   ))}
                 </ul>
