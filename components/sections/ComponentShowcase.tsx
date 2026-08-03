@@ -61,9 +61,19 @@ export default function ComponentShowcase() {
       <SectionContainer id="showcase-safety" size="lg" className="relative z-20">
         <div className="relative">
           <Certificate
-            title="Circle of Trust Verification"
-            awardedTo="KidDost Companions"
-            description="Every KidDost member undergoes a rigorous background screening, including thorough identity and reference checks, before joining our network."
+            title="How We Select KidDost Members"
+            awardedTo="Only educated female members"
+            description={
+              <ul className="text-left flex flex-col gap-2 mx-auto max-w-sm mt-4 font-sans text-sm md:text-base text-ink-medium leading-relaxed">
+                <li className="flex gap-2"><span className="text-terracotta">•</span> Identity verification</li>
+                <li className="flex gap-2"><span className="text-terracotta">•</span> Address verification</li>
+                <li className="flex gap-2"><span className="text-terracotta">•</span> Reference checks</li>
+                <li className="flex gap-2"><span className="text-terracotta">•</span> Personal interviews</li>
+                <li className="flex gap-2"><span className="text-terracotta">•</span> Activity and communication assessment</li>
+                <li className="flex gap-2"><span className="text-terracotta">•</span> Training before independent sessions</li>
+                <li className="flex gap-2"><span className="text-terracotta">•</span> Ongoing parent feedback</li>
+              </ul>
+            }
             date="2024–2025"
           />
 
@@ -83,10 +93,10 @@ export default function ComponentShowcase() {
           {/* Document 1: Report Card (Review) */}
           <div className="relative md:absolute md:top-0 md:left-10 w-full max-w-[450px] md:w-[450px] z-10 self-start" style={{ rotate: '-2deg' }}>
             <ReportCard
-              name="Priya S."
+              name="Anjaly"
               subject="Child Engagement"
               grade="5 Stars"
-              comment="KidDost has been a lifesaver! The companion was so patient and engaging. My 4-year-old usually takes time to warm up, but they were playing together in 10 minutes. Highly recommend!"
+              comment="KidDost has been a lifesaver in providing timely, high quality child care services in the last two years. The KidDost members are well trained, know how to keep kids engaged and carry good quality and varied toys/activities that are age appropriate. As per need, they are also able to take up specific activities as needed like revising phonics, doing worksheets etc."
               date="1 week ago"
             />
           </div>
@@ -107,10 +117,10 @@ export default function ComponentShowcase() {
           {/* Document 3: Another Report Card slightly tucked under */}
           <div className="relative md:absolute md:top-[280px] md:left-1/3 w-full max-w-[450px] md:w-[400px] z-15 self-center" style={{ rotate: '1deg' }}>
             <ReportCard
-              name="Rahul M."
+              name="Aakanksha"
               subject="Home Tutoring"
               grade="5 Stars"
-              comment="Excellent tutoring service. The tutor understood exactly where my daughter was struggling in Math and made the sessions interactive and fun. We are seeing great progress."
+              comment="I’m so glad I enrolled my child here, it’s honestly one of the best decisions I’ve made. The amount of effort and sincerity the teachers put into each class is truly amazing. The handmade worksheets are just incredible and clearly crafted with so much care and thought. You can see how deeply invested the team is in the children’s learning. A big thank you to all the teachers you’re doing an outstanding job!"
               date="3 weeks ago"
             />
           </div>

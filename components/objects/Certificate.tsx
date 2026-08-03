@@ -42,10 +42,6 @@ export default function Certificate({
           <div className="h-px w-24 bg-dusty-blue/30" />
         </div>
 
-        <p className="font-sans text-xs uppercase tracking-widest text-ink-light mb-4">
-          This certifies that
-        </p>
-
         <p className="font-serif text-2xl text-dusty-blue italic mb-6">
           {awardedTo}
         </p>
