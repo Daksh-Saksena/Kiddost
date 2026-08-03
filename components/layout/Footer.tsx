@@ -54,7 +54,7 @@ export default function Footer() {
               <span className="font-serif text-2xl font-semibold text-ink-charcoal">
                 KidDost
               </span>
-            </div>
+            </a>
 
 
 
