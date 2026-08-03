@@ -63,7 +63,7 @@ export default function Navigation() {
           {/* Logo */}
           <a href="/" className="flex items-center gap-2.5 flex-shrink-0" aria-label="KidDost home">
             <Image
-              src="/logo.png"
+              src="/logo.svg"
               alt="KidDost logo"
               width={36}
               height={36}

@@ -41,11 +41,11 @@ export default function Footer() {
         {/* Main footer grid */}
         <div className="py-14 md:py-20 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8">
 
-          {/* Brand column */}
-          <div className="md:col-span-4 flex flex-col gap-5">
-            <div className="flex items-center gap-2.5">
+          {/* Column 1: Logo & Mission */}
+          <div className="col-span-1 lg:col-span-3">
+            <a href="/" className="inline-flex items-center gap-3 mb-6">
               <Image
-                src="/logo.png"
+                src="/logo.svg"
                 alt="KidDost logo"
                 width={40}
                 height={40}
