@@ -35,10 +35,14 @@ export default function ComponentShowcase() {
             <Badge variant="blue">✓ Flexible hourly bookings</Badge>
           </div>
           
-          <div className="col-span-1 md:col-span-2 mb-4">
-            <p className="font-serif italic text-xl text-terracotta border-l-4 border-terracotta/40 pl-4 py-1 leading-relaxed">
-              KidDost is not a nanny service. Our focus is active, screen-free engagement and learning through play.
-            </p>
+          <div className="col-span-1 md:col-span-2 mt-2 mb-8">
+            <div className="bg-tape-yellow/30 p-6 rounded-sm relative shadow-paper-sm border border-tape-yellow/50">
+              {/* Tape decoration */}
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-tape-pink/60 rotate-2 opacity-80 backdrop-blur-sm" />
+              <p className="font-hand text-3xl text-ink-charcoal text-center leading-relaxed">
+                "KidDost is <span className="text-terracotta underline decoration-wavy underline-offset-4">not</span> a nanny service. Our focus is active, screen-free engagement and learning through play."
+              </p>
+            </div>
           </div>
           {/* Service Item 1 */}
           <div className="flex flex-col gap-3">
