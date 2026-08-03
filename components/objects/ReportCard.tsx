@@ -70,8 +70,10 @@ export default function ReportCard({
 
       {/* Grade */}
       <div className="flex items-center gap-4 mb-6">
-        <div className="w-16 h-16 rounded-full border border-ink-charcoal flex items-center justify-center bg-paper-white">
-          <span className="font-serif text-2xl font-bold text-ink-charcoal">{grade}</span>
+        <div className="w-16 h-16 shrink-0 rounded-full border border-ink-charcoal flex items-center justify-center bg-paper-white">
+          <span className="font-serif text-2xl font-bold text-ink-charcoal">
+            {grade === '5 Stars' ? '5' : grade}
+          </span>
         </div>
         <div>
           <p className="font-sans text-xs uppercase tracking-widest text-ink-medium mb-1">

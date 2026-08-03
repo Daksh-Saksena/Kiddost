@@ -7,7 +7,7 @@ import RubberStamp from '@/components/ui/RubberStamp'
 
 interface EnvelopeProps {
   title: string
-  description: string
+  description: React.ReactNode
   action: React.ReactNode
   className?: string
 }

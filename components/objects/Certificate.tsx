@@ -33,7 +33,7 @@ export default function Certificate({
       )}
     >
       {/* Inner border — intricate certificate style */}
-      <div className="border-[3px] border-double border-dusty-blue/40 p-8 md:p-12 text-center h-full relative">
+      <div className="border-[3px] border-double border-dusty-blue/40 p-8 pb-20 md:p-12 md:pb-24 text-center h-full relative">
         <h3 className="font-serif text-3xl md:text-4xl font-semibold text-ink-charcoal mb-2">
           {title}
         </h3>
@@ -72,7 +72,7 @@ export default function Certificate({
         </div>
 
         {/* Official Stamp */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-1/3">
+        <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2">
           <RubberStamp text="Background" subtext="Verified" color="blue" size="md" rotation={4} />
         </div>
       </div>

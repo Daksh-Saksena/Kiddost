@@ -2,7 +2,7 @@
 
 import SectionContainer from '@/components/layout/SectionContainer'
 import Envelope from '@/components/objects/Envelope'
-import { MessageCircle, Phone } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 import { whatsapp } from '@/lib/tokens'
 import { cn } from '@/lib/cn'
 import MarginNote from '@/components/ui/MarginNote'
@@ -42,8 +42,14 @@ export function WhatsAppCTASection() {
       </div>
 
       <Envelope
-        title="Ready to reclaim your time?"
-        description="Drop us a message on WhatsApp. Tell us about your child and we'll match you with the perfect KidDost companion."
+        title="Screen-Free Learning Companions for Children Aged 1–8"
+        description={
+          <>
+            Trained female KidDost members engage your child at home through stories, puzzles, art, brain games, movement and age-appropriate learning activities.
+            <br /><br />
+            <strong>At-home &bull; One-to-one &bull; Bangalore</strong>
+          </>
+        }
         action={
           <div className="flex flex-col items-center gap-4">
             <a
@@ -62,14 +68,6 @@ export function WhatsAppCTASection() {
             >
               <MessageCircle size={20} aria-hidden="true" />
               <span>WhatsApp Us Now</span>
-            </a>
-
-            <a
-              href={`tel:+${whatsapp.number}`}
-              className="inline-flex items-center gap-2 font-sans text-sm text-ink-medium hover:text-ink-charcoal transition-colors"
-            >
-              <Phone size={14} className="text-ink-light" aria-hidden="true" />
-              <span>+91 82967 56700</span>
             </a>
           </div>
         }

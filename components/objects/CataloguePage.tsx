@@ -38,7 +38,7 @@ export default function CataloguePage({
         <span className="font-serif text-sm font-semibold text-ink-charcoal">{pageNumber}</span>
       </div>
 
-      <div className="mb-12 max-w-2xl">
+      <div className="mb-12 max-w-2xl pr-16 md:pr-20">
         <h2 className="font-serif text-4xl md:text-5xl font-semibold text-ink-charcoal mb-4">
           {title}
         </h2>
