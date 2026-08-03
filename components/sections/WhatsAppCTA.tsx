@@ -77,7 +77,7 @@ export function WhatsAppCTASection() {
               )}
             >
               <MessageCircle size={20} aria-hidden="true" />
-              <span>WhatsApp Us Now</span>
+              <span>Book Your Introductory Session</span>
             </a>
           </div>
         }

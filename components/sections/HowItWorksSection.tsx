@@ -49,7 +49,7 @@ export default function HowItWorksSection() {
           <PaperClip color="gold" size="lg" />
         </div>
 
-        <h2 className="font-serif text-3xl md:text-4xl font-semibold text-ink-charcoal mb-8 text-center">
+        <h2 className="font-serif text-4xl md:text-5xl font-semibold text-ink-charcoal mb-8 text-center">
           How KidDost Works
         </h2>
         

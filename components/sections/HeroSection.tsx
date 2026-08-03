@@ -17,7 +17,12 @@ export default function HeroSection() {
     >
       <CoverPage
         accentColor="sage"
-        title="Screen-Free Learning Companions for Children Aged 1–8"
+        title={
+          <>
+            Screen-Free Learning Companions <br className="hidden md:block" />
+            <span className="text-terracotta">for Children Aged 1–8</span>
+          </>
+        }
         subtitle={
           <div className="mt-6 w-fit mx-auto md:mx-0">
             <StickyNote color="yellow" tilt="right" className="text-center font-sans px-6 py-4">
@@ -36,6 +41,7 @@ export default function HeroSection() {
             variant="whatsapp"
             size="lg"
             pulse
+            iconPosition="left"
           >
             To Learn More
           </Button>
