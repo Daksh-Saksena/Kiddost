@@ -8,6 +8,7 @@ import IndexCard from '@/components/objects/IndexCard'
 import MarginNote from '@/components/ui/MarginNote'
 import StickyNote from '@/components/ui/StickyNote'
 import Tag from '@/components/ui/Tag'
+import Badge from '@/components/ui/Badge'
 import FoldedCorner from '@/components/ui/FoldedCorner'
 import Divider from '@/components/ui/Divider'
 
@@ -23,10 +24,22 @@ export default function ComponentShowcase() {
       {/* ── 1. The Catalogue Page (Services) ── */}
       <SectionContainer id="showcase-catalogue" size="lg" className="relative z-10">
         <CataloguePage
-          title="What a KidDost does"
-          subtitle="Every session is crafted around your child's age, interests, and energy."
+          title="Who is a KidDost"
+          subtitle="A KidDost member is a trained female learning companion who engages children through age-appropriate play, conversation, stories, creative activities, puzzles, movement and learning support. Our members are selected for their warmth, communication skills and ability to connect meaningfully with children."
           pageNumber="02"
         >
+          {/* Feature Highlights Banner */}
+          <div className="col-span-1 md:col-span-2 flex flex-col sm:flex-row flex-wrap gap-3 mb-2 border-b border-ink-light/20 pb-8">
+            <Badge variant="sage">✓ Background-verified members</Badge>
+            <Badge variant="terracotta">✓ Activities planned by age</Badge>
+            <Badge variant="blue">✓ Flexible hourly bookings</Badge>
+          </div>
+          
+          <div className="col-span-1 md:col-span-2 mb-4">
+            <p className="font-serif italic text-xl text-terracotta border-l-4 border-terracotta/40 pl-4 py-1 leading-relaxed">
+              KidDost is not a nanny service. Our focus is active, screen-free engagement and learning through play.
+            </p>
+          </div>
           {/* Service Item 1 */}
           <div className="flex flex-col gap-3">
             <h4 className="font-serif text-2xl text-ink-charcoal border-b border-ink-light/20 pb-2">

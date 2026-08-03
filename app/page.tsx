@@ -3,6 +3,7 @@ import Footer from '@/components/layout/Footer'
 import HeroSection from '@/components/sections/HeroSection'
 import ComponentShowcase from '@/components/sections/ComponentShowcase'
 import { WhatsAppCTASection } from '@/components/sections/WhatsAppCTA'
+import HowItWorksSection from '@/components/sections/HowItWorksSection'
 import Divider from '@/components/ui/Divider'
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -35,6 +36,11 @@ export default function Page() {
         <WhatsAppCTASection />
 
         <Divider variant="rule" />
+
+        {/* How It Works */}
+        <HowItWorksSection />
+
+        <Divider variant="thread" />
 
         {/* Design System Showcase */}
         <ComponentShowcase />
