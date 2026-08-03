@@ -46,10 +46,12 @@ export function WhatsAppCTASection() {
         description={
           <>
             Trained female KidDost members engage your child at home through stories, puzzles, art, brain games, movement and age-appropriate learning activities.
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6">
-              <span className="font-hand text-2xl text-dusty-blue-dark">At-home</span>
-              <span className="font-hand text-2xl text-terracotta">One-to-one Sessions</span>
-              <span className="font-hand text-2xl text-sage-dark">Bangalore</span>
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-6">
+              <span className="font-sans text-sm font-semibold text-ink-medium uppercase tracking-wide">At-home</span>
+              <span className="text-ink-light/50">&bull;</span>
+              <span className="font-sans text-sm font-semibold text-ink-medium uppercase tracking-wide">One-to-one Sessions</span>
+              <span className="text-ink-light/50">&bull;</span>
+              <span className="font-sans text-sm font-semibold text-ink-medium uppercase tracking-wide">Bangalore</span>
             </div>
           </>
         }

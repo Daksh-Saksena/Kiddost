@@ -44,27 +44,27 @@ export default function HowItWorksSection() {
         </MarginNote>
       </div>
 
-      <PaperCard variant="notebook" animate={true} className="p-8 md:p-12 md:px-16 w-full max-w-3xl mx-auto relative" rotate={-1}>
-        <div className="absolute top-0 right-10 -mt-4">
+      <PaperCard variant="notebook" animate={true} className="p-6 md:p-8 w-full max-w-2xl mx-auto relative" rotate={-1}>
+        <div className="absolute top-0 right-8 -mt-4">
           <PaperClip color="gold" size="lg" />
         </div>
 
-        <h2 className="font-serif text-4xl md:text-5xl font-semibold text-ink-charcoal mb-12 text-center">
+        <h2 className="font-serif text-3xl md:text-4xl font-semibold text-ink-charcoal mb-8 text-center">
           How KidDost Works
         </h2>
         
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-6">
           {steps.map((step, idx) => (
-            <div key={idx} className="flex flex-col md:flex-row gap-4 md:gap-8 items-start relative group">
+            <div key={idx} className="flex flex-col md:flex-row gap-3 md:gap-6 items-start relative group">
               {idx < steps.length - 1 && (
-                <div className="hidden md:block absolute left-6 top-14 bottom-[-40px] w-px bg-border-medium" />
+                <div className="hidden md:block absolute left-10 top-8 bottom-[-24px] w-px bg-border-medium" />
               )}
-              <div className={`shrink-0 relative z-10 flex items-center justify-center w-12 h-12 rounded-full border-[2px] shadow-paper-sm transition-transform group-hover:scale-110 duration-300 ${colorMap[step.colorKey]}`}>
-                <span className="font-hand text-3xl font-bold">{idx + 1}</span>
+              <div className={`shrink-0 relative z-10 flex items-center justify-center w-20 h-8 rounded-full border-[2px] shadow-paper-sm transition-transform group-hover:scale-105 duration-300 ${colorMap[step.colorKey]}`}>
+                <span className="font-sans text-[11px] font-bold tracking-widest uppercase">Step {idx + 1}</span>
               </div>
-              <div className="pt-1">
-                <h3 className="font-hand text-3xl md:text-4xl text-ink-charcoal mb-1">{step.title}</h3>
-                <p className="font-sans text-base text-ink-medium leading-relaxed max-w-lg">{step.description}</p>
+              <div className="pt-0.5">
+                <h3 className="font-hand text-2xl md:text-3xl text-ink-charcoal mb-1">{step.title}</h3>
+                <p className="font-sans text-sm text-ink-medium leading-relaxed max-w-lg">{step.description}</p>
               </div>
             </div>
           ))}

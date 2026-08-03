@@ -44,34 +44,7 @@ export default function ComponentShowcase() {
               </p>
             </div>
           </div>
-          {/* Service Item 1 */}
-          <div className="flex flex-col gap-3">
-            <h4 className="font-serif text-2xl text-ink-charcoal border-b border-ink-light/20 pb-2">
-              Play & Engagement
-            </h4>
-            <p className="font-sans text-sm text-ink-medium leading-relaxed">
-              Structured and free play that develops social, emotional, and cognitive skills.
-              We bring age-appropriate games and boundless energy.
-            </p>
-            <div className="flex gap-2 mt-2">
-              <Tag color="terracotta">Indoor</Tag>
-              <Tag color="blue">Outdoor</Tag>
-            </div>
-          </div>
 
-          {/* Service Item 2 */}
-          <div className="flex flex-col gap-3">
-            <h4 className="font-serif text-2xl text-ink-charcoal border-b border-ink-light/20 pb-2">
-              Home Tutoring
-            </h4>
-            <p className="font-sans text-sm text-ink-medium leading-relaxed">
-              Personalised academic support and homework help in a comfortable home setting.
-              No more daily battles over math worksheets.
-            </p>
-            <div className="flex gap-2 mt-2">
-              <Tag color="sage">All grades</Tag>
-            </div>
-          </div>
         </CataloguePage>
 
         {/* Scattered elements around the catalogue */}
