@@ -44,6 +44,17 @@ export default function Page() {
 
         {/* Design System Showcase */}
         <ComponentShowcase />
+
+        <Divider variant="thread" />
+
+        {/* Pricing */}
+        <section id="pricing" className="relative w-full max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20 flex justify-center">
+          <img 
+            src="/Pricing.png" 
+            alt="KidDost Pricing Plans" 
+            className="w-full max-w-4xl h-auto rounded-md shadow-paper-lg border border-border-soft" 
+          />
+        </section>
       </main>
 
       <Footer />

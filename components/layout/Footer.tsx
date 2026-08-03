@@ -56,10 +56,7 @@ export default function Footer() {
               </span>
             </div>
 
-            <p className="font-sans text-sm text-ink-medium leading-relaxed max-w-xs">
-              Verified, warm companions who come to your home and engage your child — 
-              so you get the time you deserve, guilt-free.
-            </p>
+
 
             {/* Stamp decoration */}
             <div className="mt-2">
