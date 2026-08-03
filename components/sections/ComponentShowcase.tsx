@@ -25,7 +25,7 @@ export default function ComponentShowcase() {
       <SectionContainer id="showcase-catalogue" size="lg" className="relative z-10">
         <CataloguePage
           title="Who is a KidDost"
-          subtitle="A KidDost member is a trained female learning companion who engages children through age-appropriate play, conversation, stories, creative activities, puzzles, movement and learning support. Our members are selected for their warmth, communication skills and ability to connect meaningfully with children."
+          subtitle="A KidDost member is a trained educated female learning companion who engages children through age-appropriate play, conversation, stories, creative activities, puzzles, movement and learning support. Our members are selected for their warmth, communication skills and ability to connect meaningfully with children."
           pageNumber="02"
         >
           {/* Feature Highlights Banner */}
