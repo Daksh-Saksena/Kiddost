@@ -1,14 +1,14 @@
-# KidDost
+# KidDost website!
 
 **Live Website:** [www.kiddost.com](https://www.kiddost.com)
 
-KidDost is a professional web application built to serve as the digital storefront for my mother's business. The business focuses on providing trained, screen-free learning companions for children aged 1-8. 
+KidDost is a professional web application built to serve as the digital storefront for my mother's childcare buisness!
 
-This project was developed as a complete modernization and migration from an older, limited Wix website into a fully custom, high-performance web application built with modern web technologies.
+This project was developed as a complete modernization and migration from an older, limited Wix website into a fully custom, high-performance web application built with modern web technologies which looks a LOT better.
 
 ## The Design Theme
 
-A primary focus of this project was crafting a highly unique and engaging visual aesthetic. The website utilizes a **skeuomorphic, physical stationery theme**. 
+A primary focus of this project was crafting a highly unique and engaging visual aesthetic. The website utilizes a **skeuomorphic, physical stationery theme it makes you feel like you're back in the classroom doing projects and craft!**. 
 
 Rather than relying on flat, generic web layouts, the interface mimics real-world objects:
 - Warm paper textures and kraft backgrounds
@@ -20,7 +20,7 @@ This design language creates a warm, premium, and trustworthy atmosphere that al
 
 ## My Learning Journey
 
-Building KidDost was an incredible educational experience that significantly advanced my skills in front-end development and design. 
+Building this was a REALLY fun experience that significantly advanced my skills in front end development and design!
 
 Throughout the development process, I learned:
 - **Advanced UI/UX Design:** Translating physical world concepts into digital components using CSS and understanding how to maintain a consistent aesthetic language across an entire application.
@@ -29,8 +29,19 @@ Throughout the development process, I learned:
 - **Animation and Interactivity:** Using animation libraries to bring physical elements to life (e.g., paper sliding, tape peeling, and floating buttons) without compromising performance.
 - **Modern Web Frameworks:** Navigating the ecosystem of modern React frameworks to build a production-ready, fast, and SEO-friendly application.
 
-## Technologies Used
+## Tech
 - Next.js (React Framework)
 - Tailwind CSS (Styling)
 - Framer Motion (Animations)
 - Lucide React (Icons)
+
+## Images
+
+<p align="center">
+  <img src="screenshot1.png" width="48%" />
+  <img src="screenshot2.png" width="48%" />
+</p>
+<p align="center">
+  <img src="screenshot3.png" width="48%" />
+  <img src="screenshot4.png" width="48%" />
+</p>
